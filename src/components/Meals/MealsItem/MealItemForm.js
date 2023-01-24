@@ -38,7 +38,12 @@ const MealsItemForm = (props) => {
 
       {!amountIsValid && (
         <Modal onAmountModalClick={closeModal}>
-          <h3>Please Enter Valid Amount (1-5)</h3>
+          <div className={classes.actions}>
+            <h3>Please Enter Valid Amount (1-5)</h3>
+            <button className={classes["button--alt"]} onClick={closeModal}>
+              Close
+            </button>
+          </div>
         </Modal>
       )}
     </form>
